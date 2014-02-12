@@ -25,9 +25,9 @@ local allText=myText[1].." "..myText[2].." "..myText[3].." "..myText[4].." "..
 myText[5].." "..myText[6].." "..myText[7]
 
 local displayWord = display.newText(allText,155,80,"Comic Sans MS",15)
---displayWord:setFillColor(1)
+
 local inText=display.newText("Shake for your lucky color",150,150,"Comic Sans MS",15)
---inText:setFillColor(120/225,10/120,120/255)
+
 local randomWord
 function onShake(event)
 	
@@ -46,28 +46,9 @@ end
 --http://thatssopanda.com/corona-sdk-tutorials/using-the-shake-event-with-corona-sdk/
 if randomWord==nil then
 	Runtime:addEventListener("accelerometer", onShake)
-	--randomWord=display.newText("")
+
 
 else
 randomWord:removeSelf()
 randomWord=nil
 end
-function Removeyixia()
-	randomWord:removeSelf()
-	randomWord=nil
-end
-
-
-
--- if randomWord ~= nil then
--- randomWord:removeSelf()
--- randomWord=nil
--- --Runtime:addEventListener("accelerometer", onShake)
--- else 
--- Runtime:addEventListener("accelerometer", onShake)
-
--- end
-
---I am not sure what this means.
---randomWord:removeSelf()
-
